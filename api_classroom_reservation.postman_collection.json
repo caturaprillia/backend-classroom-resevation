@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "60e3df19-2215-4cb2-80cc-fe74ff925938",
+		"name": "api_classroom_reservation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39834239"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/register?name=sucitra&email=sucitra@gmail.com&password=password123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "sucitra"
+								},
+								{
+									"key": "email",
+									"value": "sucitra@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "password123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/login?password=password123&email=sucitra@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "password123"
+								},
+								{
+									"key": "email",
+									"value": "sucitra@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservation",
+			"item": [
+				{
+					"name": "create reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/reservations?classroom_id=1&user_id=1&reservation_endTime=2025-01-05 10:00:00&reservation_startTime=2025-01-05 08:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"reservations"
+							],
+							"query": [
+								{
+									"key": "classroom_id",
+									"value": "1"
+								},
+								{
+									"key": "user_id",
+									"value": "1"
+								},
+								{
+									"key": "reservation_endTime",
+									"value": "2025-01-05 10:00:00"
+								},
+								{
+									"key": "reservation_startTime",
+									"value": "2025-01-05 08:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit reservation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/reservations/1?classroom_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"reservations",
+								"1"
+							],
+							"query": [
+								{
+									"key": "classroom_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find reservations",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete reservation",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Classroom",
+			"item": [
+				{
+					"name": "create classrooms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/classrooms/?name=Lab Komputer Dasar&location=FTK B&start_time=2025-01-05 08:00:00&end=2025-01-05 10:00:00&user_id=2&course_id=4&id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"classrooms",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lab Komputer Dasar"
+								},
+								{
+									"key": "location",
+									"value": "FTK B"
+								},
+								{
+									"key": "start_time",
+									"value": "2025-01-05 08:00:00"
+								},
+								{
+									"key": "end",
+									"value": "2025-01-05 10:00:00"
+								},
+								{
+									"key": "user_id",
+									"value": "2"
+								},
+								{
+									"key": "course_id",
+									"value": "4"
+								},
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find classroom",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "edit classroom",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/classrooms/3?start_time=2025-01-04 13:42:51&name=Lab Hybrid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"classrooms",
+								"3"
+							],
+							"query": [
+								{
+									"key": "start_time",
+									"value": "2025-01-04 13:42:51"
+								},
+								{
+									"key": "name",
+									"value": "Lab Hybrid"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete classroom",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/classrooms/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"classrooms",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
